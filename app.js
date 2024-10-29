@@ -9,12 +9,12 @@ app.use((req, res, next) => {
 
 // Middleware 2
 app.use((req, res, next) => {
-    console.log('Middleware 2 u');
+    console.log('Middleware 2');
     next();
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World! ko');
 });
 
 app.listen(3000, () => {
