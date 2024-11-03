@@ -35,6 +35,16 @@ app.get('/', (req, res) => {
         <input type="text" name="message" placeholder="Enter Message" required>
         <button type="submit">Send</button>
       </form>
+      <script>
+      const username = localStorage.getItem('username'); 
+      document.querySelector('form').addEventListener('submit', function(e)
+      { 
+        const hiddenInput = document.createElement('input'); 
+        hiddenInput.type = 'hidden'; 
+        hiddenInput.name = 'username';
+        hiddenInput.value = username; 
+        this.appendChild(hiddenInput); });
+      </script>
     `);
   });
   
